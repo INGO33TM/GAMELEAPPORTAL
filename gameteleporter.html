@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameLeapPortal</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* Gamer-themed dark blue color */
+    color: #fff;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  .button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<h1>Welcome to GameLeapPortal!</h1>
+
+<div class="container">
+  <div>
+    <h2>Strategy</h2>
+    <button class="button" onclick="openGame('chess')">Chess</button>
+  </div>
+  <div>
+    <h2>Puzzle</h2>
+    <button class="button" onclick="openGame('sudoku')">Sudoku</button>
+    <button class="button" onclick="openGame('tetris')">Tetris</button>
+    <button class="button" onclick="openGame('2048')">2048</button>
+    <button class="button" onclick="openGame('bejeweled')">Bejeweled</button>
+    <button class="button" onclick="openGame('littleAlchemy')">Little Alchemy 2</button>
+    <button class="button" onclick="openGame('flowFree')">Flow Free</button>
+  </div>
+  <div>
+    <h2>Tickle Your Brain</h2>
+    <button class="button" onclick="openGame('iq')">IQ Test</button>
+    <button class="button" onclick="openGame('maths')">Maths Game</button>
+  </div>
+  <div>
+    <h2>Other Games</h2>
+    <button class="button" onclick="openTennis()">Tennis</button>
+    <button class="button" onclick="openMakeItMeme()">Make it Meme</button>
+    <button class="button" onclick="openPool()">Pool</button>
+    <button class="button" onclick="openAgarIo()">Agar.io</button>
+    <button class="button" onclick="openSlitherIo()">Slither.io</button>
+    <button class="button" onclick="openGeoGuessr()">GeoGuessr</button>
+    <button class="button" onclick="openCookieClicker()">Cookie Clicker</button>
+    <button class="button" onclick="openHelicopterGame()">Helicopter Game</button>
+    <button class="button" onclick="openDinosaurGame()">Google Dinosaur Game</button>
+    <button class="button" onclick="openSushiCat()">Sushi Cat</button>
+    <button class="button" onclick="openCanabalt()">Canabalt</button>
+    <button class="button" onclick="openSnake()">Snake</button>
+    <button class="button" onclick="openHoleIo()">Hole.io</button>
+    <button class="button" onclick="openQWOP()">QWOP</button>
+    <button class="button" onclick="openRealmOfTheMadGod()">Realm of the Mad God</button>
+    <button class="button" onclick="openSpelunky()">Spelunky HTML5</button>
+    <button class="button" onclick="openCurveFever()">Curve Fever</button>
+    <button class="button" onclick="openSuperHexagon()">Super Hexagon</button>
+    <button class="button" onclick="openDogeMiner()">Doge Miner 2</button>
+    <button class="button" onclick="openRunescape()">Runescape</button>
+  </div>
+  <div>
+    <h2>Games for Students</h2>
+    <button class="button" onclick="openKahoot()">Kahoot!</button>
+    <button class="button" onclick="openQuizizz()">Quizizz</button>
+    <button class="button" onclick="openTriventy()">Triventy</button>
+    <button class="button" onclick="openGimkit()">Gimkit</button>
+    <button class="button" onclick="openProProfsQuizMaker()">ProProfs Quiz Maker</button>
+    <button class="button" onclick="openSporcle()">Sporcle</button>
+    <button class="button" onclick="openSheppardSoftware()">Sheppard Software</button>
+    <button class="button" onclick="openPBSLearningGames()">PBS LearningGames</button>
+    <button class="button" onclick="openBrainPOP()">BrainPOP</button>
+  </div>
+  <div>
+    <h2>Keyboard and Mouse Games</h2>
+    <button class="button" onclick="openRun3()">Run 3</button>
+    <button class="button" onclick="openFireboyAndWatergirl()">Fireboy and Watergirl</button>
+    <button class="button" onclick="openImpossibleQuiz()">The Impossible Quiz</button>
+    <button class="button" onclick="openCookieClicker()">Cookie Clicker</button>
+    <button class="button" onclick="openSlitherIo()">Slither.io</button>
+    <button class="button" onclick="openAgarIo()">Agar.io</button>
+    <button class="button" onclick="openPaperIo()">Paper.io</button>
+  </div>
+  <div>
+    <h2>Play Without Console from Mobile</h2>
+    <button class="button" onclick="openAirConsole()">AirConsole</button>
+    <button class="button" onclick="openJackboxGames()">Jackbox Games</button>
+    <button class="button" onclick="openBombSquad()">BombSquad</button>
+    <button class="button" onclick="openPictionaryAir()">Pictionary Air</button>
+  </div>
+  <div>
+    <h2>Play with Friends 1vs1(ONLINE)</h2>
+    <button class="button" onclick="openGame('airHockey')">Air Hockey</button>
+    <button class="button" onclick="openGame('pong')">Pong</button>
+  </div>
+  <div>
+    <h2>Play with Friends 1vs1(OFFLINE WITH INTERNET)</h2>
+    <button class="button" onclick="openTextTwist()">Text Twist</button>
+    <button class="button" onclick="openWordAssociation()">Word Association</button>
+    <button class="button" onclick="openGoogleFeud()">Google Feud</button>
+    <button class="button" onclick="openHangman()">Hangman</button>
+    <button class="button" onclick="openPaperSoccer()">Paper Soccer</button>
+  </div>
+  <div>
+    <h2>Typing Games</h2>
+    <button class="button" onclick="openTypeRacer()">TypeRacer</button>
+    <button class="button" onclick="openTypeRush()">TypeRush</button>
+    <button class="button" onclick="openKeybr()">Keybr</button>
+    <button class="button" onclick="openTypingio()">Typing.io</button>
+    <button class="button" onclick="openNitroType()">Nitro Type</button>
+  </div>
+  <div>
+    <h2>Carrom</h2>
+    <button class="button" onclick="openCarromOnline()">Carrom Online</button>
+  </div>
+</div>
+
+<script>
+  function openGame(game) {
+    switch(game) {
+      case 'chess':
+        window.open("https://www.chess.com/", "_blank");
+        break;
+      case 'sudoku':
+        window.open("https://www.sudokuweb.org/", "_blank");
+        break;
+      case 'tetris':
+        window.open("https://tetris.com/", "_blank");
+        break;
+      case '2048':
+        window.open("https://2048game.com/", "_blank");
+        break;
+      case 'bejeweled':
+        window.open("https://www.ea.com/games/bejeweled", "_blank");
+        break;
+      case 'littleAlchemy':
+        window.open("https://littlealchemy2.com/", "_blank");
+        break;
+      case 'flowFree':
+        window.open("https://www.bigduckgames.com/games/flow-free/", "_blank");
+        break;
+      case 'iq':
+        window.open("https://www.free-iqtest.net/", "_blank");
+        break;
+      case 'maths':
+        window.open("https://www.mathplayground.com/", "_blank");
+        break;
+      case 'airHockey':
+        window.open("https://www.airconsole.com/play/arcade-games/air-hockey", "_blank");
+        break;
+      case 'pong':
+        window.open("https://ponggame.org/", "_blank");
+        break;
+    }
+  }
+  
+  function openTennis() {
+    window.open("https://poki.com/en/g/tennis-masters", "_blank");
+  }
+
+  function openMakeItMeme() {
+    window.open("https://poki.com/en/g/make-it-meme", "_blank");
+  }
+
+  function openPool() {
+    // You can replace the URL below with the URL of any online carrom pool game
+    window.open("https://www.miniclip.com/games/carrom-pool/en/", "_blank");
+  }
+  
+  function openAgarIo() {
+    window.open("https://agar.io/", "_blank");
+  }
+  
+  function openSlitherIo() {
+    window.open("https://slither.io/", "_blank");
+  }
+  
+  function openGeoGuessr() {
+    window.open("https://www.geoguessr.com/", "_blank");
+  }
+  
+  function openCookieClicker() {
+    window.open("https://orteil.dashnet.org/cookieclicker/", "_blank");
+  }
+  
+  function openHelicopterGame() {
+    window.open("http://www.seethru.co.uk/zine/south_coast/helicopter_game.htm", "_blank");
+  }
+  
+  function openDinosaurGame() {
+    window.open("chrome://dino/", "_blank");
+  }
+  
+  function openSushiCat() {
+    window.open("http://www.sushicat.org/", "_blank");
+  }
+  
+  function openCanabalt() {
+    window.open("https://www.canabalt.com/", "_blank");
+  }
+  
+  function openSnake() {
+    window.open("https://playsnake.org/", "_blank");
+  }
+  
+  function openHoleIo() {
+    window.open("https://hole-io.online/", "_blank");
+  }
+  
+  function openQWOP() {
+    window.open("https://www.foddy.net/Athletics.html", "_blank");
+  }
+  
+  function openRealmOfTheMadGod() {
+    window.open("https://www.realmofthemadgod.com/", "_blank");
+  }
+  
+  function openSpelunky() {
+    window.open("https://spelunkyworld.com/original.html", "_blank");
+  }
+  
+  function openCurveFever() {
+    window.open("https://curvefever.pro/", "_blank");
+  }
+  
+  function openSuperHexagon() {
+    window.open("https://superhexagon.com/", "_blank");
+  }
+  
+  function openDogeMiner() {
+    window.open("https://dogeminer2.com/", "_blank");
+  }
+  
+  function openRunescape() {
+    window.open("https://www.runescape.com/", "_blank");
+  }
+  
+  function openKahoot() {
+    window.open("https://kahoot.com/", "_blank");
+  }
+  
+  function openQuizizz() {
+    window.open("https://quizizz.com/", "_blank");
+  }
+
+  function openTriventy() {
+    window.open("https://www.triventy.com/", "_blank");
+  }
+
+  function openGimkit() {
+    window.open("https://www.gimkit.com/", "_blank");
+  }
+
+  function openProProfsQuizMaker() {
+    window.open("https://www.proprofs.com/quiz-school/", "_blank");
+  }
+  
+  function openSporcle() {
+    window.open("https://www.sporcle.com/", "_blank");
+  }
+  
+  function openSheppardSoftware() {
+    window.open("https://www.sheppardsoftware.com/", "_blank");
+  }
+  
+  function openPBSLearningGames() {
+    window.open("https://pbskids.org/games/learning/", "_blank");
+  }
+  
+  function openBrainPOP() {
+    window.open("https://www.brainpop.com/", "_blank");
+  }
+  
+  function openRun3() {
+    window.open("https://www.coolmathgames.com/0-run-3", "_blank");
+  }
+
+  function openFireboyAndWatergirl() {
+    window.open("https://www.miniclip.com/games/fireboy-and-watergirl/en/", "_blank");
+  }
+
+  function openImpossibleQuiz() {
+    window.open("https://www.coolmathgames.com/0-impossible-quiz", "_blank");
+  }
+
+  function openPaperIo() {
+    window.open("https://paper-io.com/", "_blank");
+  }
+
+  function openAirConsole() {
+    window.open("https://www.airconsole.com/", "_blank");
+  }
+
+  function openJackboxGames() {
+    window.open("https://www.jackboxgames.com/", "_blank");
+  }
+
+  function openBombSquad() {
+    window.open("https://www.froemling.net/apps/bombsquad", "_blank");
+  }
+
+  function openPictionaryAir() {
+    window.open("https://www.pictionaryair.com/", "_blank");
+  }
+
+  function openTextTwist() {
+    window.open("https://www.merriam-webster.com/games-puzzles/text-twist", "_blank");
+  }
+
+  function openWordAssociation() {
+    // No specific URL required for this game, as it's typically played verbally or with pen and paper
+    alert("Word Association is a game typically played verbally or with pen and paper. You can start playing with a friend now!");
+  }
+
+  function openGoogleFeud() {
+    window.open("https://www.googlefeud.com/", "_blank");
+  }
+
+  function openHangman() {
+    window.open("https://www.playhangman.com/", "_blank");
+  }
+
+  function openPaperSoccer() {
+    window.open("https://paper-soccer.com/", "_blank");
+  }
+
+  function openTypeRacer() {
+    window.open("https://play.typeracer.com/", "_blank");
+  }
+
+  function openTypeRush() {
+    window.open("https://typerush.io/", "_blank");
+  }
+
+  function openKeybr() {
+    window.open("https://www.keybr.com/", "_blank");
+  }
+
+  function openTypingio() {
+    window.open("https://typing.io/", "_blank");
+  }
+
+  function openNitroType() {
+    window.open("https://www.nitrotype.com/", "_blank");
+  }
+
+  function openCarromOnline() {
+    window.open("https://www.carromonline.com/", "_blank");
+  }
+</script>
+
+</body>
+</html>
